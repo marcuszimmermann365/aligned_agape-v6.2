@@ -1,0 +1,10 @@
+PyYAML
+matplotlib
+numpy
+numpy>=1.23
+pandas
+pytest
+reportlab>=3.6
+torch>=2.1
+# optional for UI tests
+playwright

@@ -1,0 +1,54 @@
+
+scenario_id: dayton-1995-3party
+title: Dayton 1995 — Dreiparteienformat mit Internationaler Mission
+years: [1995]
+actors:
+  - id: E
+    name: Föderation (E)
+    power: {mil: 0.55, eco: 0.45, soft: 0.60}
+    core_interests: ["Territoriale_Integrität", "Funktionsfähige_Bundesorgane"]
+    corpus: corpus/actors/actorE.txt
+    traits: {O: 0.6, C: 0.6, E: 0.5, A: 0.55, N: 0.45, realism: 0.65, risk_aversion: 0.55}
+    style: "– betont gesamtstaatliche Institutionen und internationale Einbettung"
+    utility_weights: {w_mil: 0.05, w_eco: 0.25, w_soft: 0.20, coop_bonus: 0.25, escal_malus: 0.30}
+  - id: F
+    name: Entität (F)
+    power: {mil: 0.50, eco: 0.40, soft: 0.45}
+    core_interests: ["Lokale_Autonomie", "Sicherheitsgarantien"]
+    corpus: corpus/actors/actorF.txt
+    traits: {O: 0.55, C: 0.55, E: 0.5, A: 0.5, N: 0.5, realism: 0.6, risk_aversion: 0.5}
+    style: "– fordert klare Schutzmechanismen und überprüfbare Garantien"
+    utility_weights: {w_mil: 0.10, w_eco: 0.20, w_soft: 0.15, coop_bonus: 0.20, escal_malus: 0.25}
+  - id: I
+    name: Internationale Mission (I)
+    role: mediator
+    power: {mil: 0.40, eco: 0.50, soft: 0.70}
+    core_interests: ["Verifikation", "Elections_OSZE", "Implementation"]
+    corpus: corpus/actors/actorI.txt
+    traits: {O: 0.65, C: 0.65, E: 0.5, A: 0.65, N: 0.4, realism: 0.6, risk_aversion: 0.5}
+    style: "– moderiert, referenziert Standards und Sequenzierung"
+    utility_weights: {w_mil: 0.02, w_eco: 0.15, w_soft: 0.30, coop_bonus: 0.30, escal_malus: 0.35}
+red_lines:
+  - actor: E
+    prohibits: ["Aufgabe_Territoriale_Integrität", "Blockade_Gesamtorgane"]
+  - actor: F
+    prohibits: ["Abschaffung_Lokale_Autonomie", "Stationierung_Fremdtruppen_in_Kerngebieten"]
+initial_state:
+  escalation: "Crisis"
+utility_defaults:
+  w_mil: 0.08
+  w_eco: 0.20
+  w_soft: 0.18
+  coop_bonus: 0.22
+  escal_malus: 0.28
+milestones:
+  - Ceasefire
+  - Map_Alignment
+  - Constitution_Draft
+  - Elections_OSZE
+  - Normalization
+verification_tracks:
+  - Heavy_Weapons_Register
+  - Depot_Inspections
+  - Police_Reform_Benchmark
+  - Media_Access_Fairness
